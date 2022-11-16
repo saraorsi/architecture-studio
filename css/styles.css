@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --gutter: 2rem;
+    --white: #FFF;
+    --black: #252525;
+    font-size: clamp( .9rem, 1.1vw, 1.2rem);
+}
+
+@media (max-width: 556px){
+    :root{
+        --gutter: 1.25rem;
+    }
+}
+
+body{
+    font-family: 'IBM Plex Sans', sans-serif;
+    line-height: 1.3;
+
+    color: var(--black);
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.container-fluid{
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+}
+
+.row{
+    margin-left: calc(var(--gutter) * -0.5);
+    margin-right: calc(var(--gutter) * -0.5);
+}
+
+.row>*{
+    padding-left: calc(var(--gutter) * 0.5);
+    padding-right: calc(var(--gutter) * 0.5);
+}
+
+/* ========== HEADER ========== */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: 5rem;
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+    border-bottom: 1px solid var(--black);
+
+    background-color: var(--white);
+
+    font-size: 1.5rem;
+    text-transform: uppercase;
+
+    z-index: 100;
+}
+
+.header nav ul{
+    display: flex;
+    list-style: none;
+}
+
+.header nav ul li{
+    margin-left: 1rem;
+}
+/* ========== MAIN ========== */
+main{
+    margin-top: 5rem;
+}
+
+
+/* ========== HOME ========== */
+.cover-image{
+    height: calc(100vh - 8rem);
+
+    background-size: cover;
+    background-position: center;
+}
+
+/* ========== CARD ========== */
+.card{
+    margin-bottom: var(--gutter);
+}
+
+.card-title{
+    font-size: 1.25rem;
+    margin-bottom: .15rem;
+}
+
+.card-subtitle{
+    font-size: .75rem;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+}
+
+.card-image{
+    padding-top: 60%;
+    margin-bottom: .75rem;
+    
+    background-size: cover;
+    background-position: center;
+}
+
+/* ========== WORK ========== */
+.work{
+    padding-top: var(--gutter);
+}
+
+/* ========== ABOUT ========== */
+
+.about section{
+    padding: calc(var(--gutter) * .75) 0;
+}
+
+.about section ~ section{
+    border-top: 1px solid var(--black);
+}
+
+.about .about-text{
+    font-size: 1.5rem;
+}
+
+.about .section-title{
+    position: sticky;
+    top: calc(5rem + var(--gutter) * .75);
+    font-size: 1.5rem;
+}
+
+.about address{
+    font-style: normal;
+}
+
+.about ul{
+    list-style: none;
+}
+
+.about .map iframe{
+    width: 100%;
+    height: 20rem;
+
+    filter: grayscale(1);
+}
+
+/* ========== FOOTER ========== */
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: 3rem;
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+    border-top: 1px solid var(--black);
+
+    background-color: var(--white);
+
+    text-transform: uppercase;
+}
+
+.footer nav ul{
+    display: flex;
+    list-style: none;
+}
+
+.footer nav:nth-child(1) ul li{
+    margin-right: 1rem;
+}
+
+.footer nav:nth-child(2) ul li{
+    margin-left: 1rem;
+}
