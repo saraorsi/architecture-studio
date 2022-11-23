@@ -8,7 +8,6 @@
     --gutter: 2rem;
     --white: #FFF;
     --black: #252525;
-    font-size: clamp( .9rem, 1.1vw, 1.2rem);
 }
 
 @media (max-width: 556px){
